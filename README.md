@@ -19,13 +19,20 @@ Gatherly Short URL
 ## Issues:
     Keep getting a "Unauthrized Error" when trying to communicate from front-end to back-end
     I manage to get the long URLS to a small ones and saved them in a MongoDB through the back-end
-    Front-end does pass the website value but would not trigger the database, I tried multiple ways to communicate from both ports but was unsuccessful. I managed to print the new shorten URL in the command line when passing the value. 
+    Front-end does pass the website value but would not trigger the database, I tried multiple ways 
+    to communicate from both ports but was unsuccessful. I managed to print the new shorten URL in 
+    the command line when passing the value. 
 
 ### Front-End
-![Demo Open](screenshots/front-end.png) 
+![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/front-end.png)
+
 
 ### Terminal
-![Demo Closed](screenshot/terminal.png)
+![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/terminal.png)
 
 ### Web-Console
- ![Demo Closed](screenshot/web-console.png)
+![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/web-console.png)
+
+
+### Mongo DB 
+![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/DB.png)
