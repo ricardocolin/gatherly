@@ -2,36 +2,35 @@
 Gatherly Short URL
 
 ## Dependecies:
-       * "concurrently": "^6.3.0",
-       * "config": "^3.3.6",
-       * "cors": "^2.8.5",
-       * "express": "^4.17.1",
-       * "mongoose": "^6.0.10",
-       * "shortid": "^2.2.16",
-       * "valid-url": "^1.0.9"
-       * "nodemon": "^2.0.13"
+      * "dependencies": {
+      * "ejs": "^3.1.6",
+      * "express": "^4.17.1",
+      * "http-errors": "^1.8.0",
+      * "mongoose": "^6.0.11",
+      * "nodemon": "^2.0.13",
+      * "shortid": "^2.2.16"
     
 ## Run the application:
-    access the back-end folder 
-        -> npm run dev   //this will trigger the front-end and back-end ports
-        
-        
-## Issues:
-    Keep getting a "Unauthrized Error" when trying to communicate from front-end to back-end
-    I manage to get the long URLS to a small ones and saved them in a MongoDB through the back-end
-    Front-end does pass the website value but would not trigger the database, I tried multiple ways 
-    to communicate from both ports but was unsuccessful. I managed to print the new shorten URL in 
-    the command line when passing the value. 
-
+    access the Gatherly_URL_Shortener folder
+            type the following into terminal:
+            -> npm install
+            -> npm i nodemon
+            -> npm run startdev //This will start the Database and Application on PORT 5000
+            
+## Note
+     All Short-Urls are store in a MongoDB database, it remembers the Urls used so there 
+      would not be duplicates of Short-URLS for the same Long-URL
+      
+## Screenshots      
 ### Front-End
 ![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/front-end.png)
 
 
-### Terminal
-![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/terminal.png)
+### Short URL Returned
+![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/SHORT_URL.png)
 
-### Web-Console
-![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/web-console.png)
+### Displays Errors
+![alt text](https://github.com/ricardocolin/gatherly/blob/main/screenshots/URL_NOT_VALID.png)
 
 
 ### Mongo DB 
