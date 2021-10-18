@@ -19,7 +19,9 @@ Gatherly Short URL
             
 ## Note
      All Short-Urls are store in a MongoDB database, it remembers the Urls used so there 
-      would not be duplicates of Short-URLS for the same Long-URL
+     would not be duplicates of Short-URLS for the same Long-URL.
+     
+     - There some minor details to the title and button when hovered, I got too excited! 
       
 ## Screenshots      
 ### Front-End
