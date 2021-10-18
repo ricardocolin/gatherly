@@ -1,4 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://Ricardo:Coronel1@gatherlytest.4egyd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "baseUrl": "http://localhost:5000"
-}
