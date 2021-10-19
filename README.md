@@ -14,7 +14,6 @@ Gatherly Short URL
     access the Gatherly_URL_Shortener folder
             type the following into terminal:
             -> npm install
-            -> npm i nodemon
             -> npm run startdev //This will start the Database and Application on PORT 5000
             
 ## Note
