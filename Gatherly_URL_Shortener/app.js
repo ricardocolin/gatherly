@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://Ricardo:Coronel1@gatherlytest.4egyd.mongodb.net/
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log('mongoDB connected...'))
+.then(() => console.log('MongoDB Connected...'))
 .catch(error => console.log('Error Connecting...'))
 
 //enabling "ejs" as the front-end
@@ -25,6 +25,20 @@ app.set('view engine', 'ejs')
 app.get('/', async(req, res, net) => {
     res.render('index')
 })
+
+//Serves the route where new ShortID URL is triggered/Accessed
+  app.get('/:shortId', async (req, res, next) => {
+    try {
+      const { shortId } = req.params
+      const result = await ShortUrl.findOne({ shortId })
+      if (!result) {
+        throw createHttpError.NotFound('This url does not exist')
+      }
+      res.redirect(result.url)
+    } catch (error) {
+      next(error)
+    }
+  })
 
 //Getting Url from POST Request 
 app.post('/', async (req, res, next) => {
@@ -52,29 +66,15 @@ app.post('/', async (req, res, next) => {
     }
   })
 
-  //Serves the route where new ShortID URL is triggered/Accessed
-  app.get('/:shortId', async (req, res, next) => {
-    try {
-      const { shortId } = req.params
-      const result = await ShortUrl.findOne({ shortId })
-      if (!result) {
-        throw createHttpError.NotFound('Short url does not exist')
-      }
-      res.redirect(result.url)
-    } catch (error) {
-      next(error)
-    }
+ //Sends a 500 status error
+  app.use((err, req, res, next) => {
+    res.status(err.status || 500)
+    res.render('index', { error: err.message })
   })
   
   //Gives error if url was not found
   app.use((req, res, next) => {
     next(createHttpError.NotFound())
-  })
-  
-  //Sends a 500 status error
-  app.use((err, req, res, next) => {
-    res.status(err.status || 500)
-    res.render('index', { error: err.message })
   })
 
 //Serving PORT 5000
