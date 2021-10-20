@@ -24,6 +24,9 @@
                 <div class="shorten-url">
                     <!-- Displays shorten URL Created after submit is triggered -->
                     <% if (locals.shortenUrl) { %>
+                    <label class="bold-text">Original URL: </label> <input type="text" id="originalUrl" disabled="disabled" value=" <%= originalUrl  %>">
+                    <br />
+                    <br />
                     <label class="bold-text">Shortened URL: </label><a href="http://<%= shortenUrl %>" target="_blank"> <%= shortenUrl  %> </a>
                     <% } %>
                 </div>
